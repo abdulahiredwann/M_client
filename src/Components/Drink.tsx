@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import api from "../services/api";
+import { ReactTyped } from "react-typed";
 
 interface Drink {
   _id: number;
@@ -20,6 +21,17 @@ function Drink() {
   return (
     <>
       <div className="pt-20 p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <h1 className="text-3xl  sm:text-4xl md:text-5xl lg:text-6xl font-thin mb-6 leading-tight text-center">
+          <ReactTyped
+            strings={[
+              "Refresh with our drinks.",
+              "Enjoy a cool, refreshing beverage",
+            ]}
+            typeSpeed={40}
+            backSpeed={50}
+            loop
+          />
+        </h1>
         {drink.map((item) => (
           <div
             key={item._id}

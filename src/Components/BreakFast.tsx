@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import api from "../services/api";
+import { ReactTyped } from "react-typed";
 
 interface Breakfast {
   _id: number;
@@ -21,6 +22,17 @@ function BreakFast() {
   return (
     <>
       <div className="pt-20 p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <h1 className="text-3xl  sm:text-4xl md:text-5xl lg:text-6xl font-thin mb-6 leading-tight text-center">
+          <ReactTyped
+            strings={[
+              "Rise and shine, it's breakfast time!",
+              "A healthy breakfast fuels a productive day.",
+            ]}
+            typeSpeed={40}
+            backSpeed={50}
+            loop
+          />
+        </h1>
         {breakfast.map((item) => (
           <div
             key={item._id}
