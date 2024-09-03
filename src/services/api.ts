@@ -1,7 +1,7 @@
 import axios, {CanceledError} from "axios";
 
 const api  = axios.create({
-    baseURL:'http://localhost:3000/api'
+    baseURL:'https://m-server-lovat.vercel.app/api'
 })
 
 api.interceptors.request.use(
